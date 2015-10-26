@@ -18,7 +18,7 @@ while(1):
 	with sr.Microphone() as source:                # use the default microphone as the audio source
 	    	audio = r.listen(source)                   # listen for the first phrase and extract it into audio data
 	try:
-	 	query = r.recognize(audio)   
+	 	query = r.recognize_google(audio)   
 		print("You said " + query)    # recognize speech using Google Speech Recognition
 		break
 	except LookupError:                            # speech is unintelligible
